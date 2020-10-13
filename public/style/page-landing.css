@@ -1,0 +1,45 @@
+#page-landing {
+    background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+  
+    text-align: center;
+    min-height: 100vh;
+  
+    display: flex;
+    align-items: center;
+  }
+  
+  #container {
+    margin: auto;
+    width: 90%;
+  
+    /* 2 values = top/bot | left/right
+    *  3 valuess = top | sides | bot
+    *  4 values = top | right | bot | left  (clockwise)
+    */
+  
+  }
+  
+  .location, h1, .visit p {
+    height: 16vh;
+  }
+  
+  .visit a {
+    width: 8rem;
+    height: 8rem;
+    background: #ffd666;
+  
+    border: none;
+    border-radius: 3rem;
+  
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  
+    margin: auto;
+
+    transition: background 350ms;
+  }
+
+  .visit a:hover {
+    background: #96feff;
+}
