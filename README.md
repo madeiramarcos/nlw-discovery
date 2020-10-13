@@ -11,4 +11,4 @@
  
 ## Screenshot
 
-<img src="#" alt="Preview of app welcome interface">
+<img src="https://github.com/madeiramarcos/nlw-happy/blob/master/public/images/home-screenshot.svg" alt="Preview of app welcome interface">
