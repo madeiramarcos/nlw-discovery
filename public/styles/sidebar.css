@@ -1,0 +1,53 @@
+aside.sidebar {
+    position: fixed;
+    background: #15C3D6;
+    
+    height: min(82rem, 100vh);
+    padding: 3.2rem 2.4rem;
+    
+    border: none;
+    border-bottom-right-radius: 1.6rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 10;
+}
+
+aside img {
+    height: 4.8rem;
+    width: 5.6rem;
+}
+
+aside button {
+    height: 4.8rem;
+    width: 4.8rem;
+    
+    background: #12afcb;
+    
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: none;
+    border-radius: 1.6rem;
+    
+    transition: background-color 200ms;
+}
+
+aside button:hover{
+    background: #17D6EB;
+}
+
+aside button img {
+    height: 2.4rem;
+    width: 2.4rem;
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}

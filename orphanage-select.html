@@ -20,8 +20,8 @@
     ></script>
 
     <link rel="stylesheet" href="./public/styles/main.css" />
-    <link rel="stylesheet" href="./public/styles/page-orphanages.css" />
     <link rel="stylesheet" href="./public/styles/animation.css" />
+    <link rel="stylesheet" href="./public/styles/page-orphanage-select.css" />
 
     <link rel="icon" href="./public/images/logo-icon.png" />
 
@@ -32,12 +32,17 @@
   </head>
 
   <body>
-    <div id="page-orphanages">
+    <div id="page-orphanage-select">
       <aside class="animate-right">
         <header>
-          <a href="./index.html">
+
+          <button onclick="history.back()">
+          <img src="./public/images/map-marker.svg" alt="happy map pin">
+          </button>
+          
+          <!-- <a href="./index.html">
             <img src="./public/images/map-marker.svg" alt="happy map pin" />
-          </a>
+          </a> -->
 
           <h2>Escolha um orfanato no mapa</h2>
 
@@ -53,14 +58,14 @@
       <div id="mapid" class="animate-appear"></div>
 
       <a
-        href="create-orphanage.html"
-        class="create-orphanage"
+        href="orphanage-register.html"
+        class="register-orphanage"
         title="Cadastre um orfanato"
       >
         <img src="./public/images/plus.svg" alt="Criar orfanato" />
       </a>
     </div>
 
-    <script src="./public/scripts/page-orphanages.js"></script>
+    <script src="./public/scripts/page-orphanage-select.js"></script>
   </body>
 </html>

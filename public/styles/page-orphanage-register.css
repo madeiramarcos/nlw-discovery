@@ -1,0 +1,23 @@
+#page-orphanage-register {
+    display: flex;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    /* margin: auto; */
+}
+
+.map-container {
+    margin: 0 0 4rem;
+}
+
+/* usei REM talvez seja PX */
+.map-container .leaflet-container {
+    border-radius: 2rem 2rem 0 0;
+}
+
+.map-container footer {
+    background: #F5F8FA;
+    border-radius: 0 0 2rem 2rem;
+}

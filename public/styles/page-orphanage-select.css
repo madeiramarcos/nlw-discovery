@@ -1,12 +1,18 @@
-#page-orphanages {
+#page-orphanage-select {
   width: 100%;
   height: 100%;
 
   display: flex;
 }
 
-
 /* styling sidebar */
+
+header button {
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  
+  cursor: pointer;
+}
 
 aside {
   width: clamp(24rem, 25vw, 48rem); /* largura minima (240px) | ideal (1/4) | máxima (480px) */
@@ -44,7 +50,7 @@ aside footer p {
 
 /* "add orphanage" button */
 
-a.create-orphanage {
+a.register-orphanage {
   position: absolute;
   top: 90%;
   left: 95%;
@@ -64,7 +70,7 @@ a.create-orphanage {
   transition: background-color 200ms;
 }
 
-a.create-orphanage:hover {
+a.register-orphanage:hover {
   background: #17d6eb;
 }
 

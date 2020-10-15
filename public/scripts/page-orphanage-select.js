@@ -1,6 +1,6 @@
 // create map environment
 
-const mymap = L.map("mapid").setView([-22.89, -47.07], 15);
+const mymap = L.map("mapid").setView([-22.896, -47.075], 15);
 
 // add tileLayer to map environment
 
@@ -18,11 +18,6 @@ L.tileLayer(
   }
 ).addTo(mymap);
 
-
-
-// marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup()
-
-
 // custom icon 
 
 const icon = L.icon({
@@ -39,10 +34,10 @@ const popup = L.popup({
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Lar das meninas <a href="orphanage.html?id=1" class="choose-orphanage"><img src="./public/images/arrow-white.svg" alt="arrow icon"></a>')
+}).setContent('Casa Maria de Nazaré <a href="orphanage-details.html?id=1" class="choose-orphanage"><img src="./public/images/arrow-white.svg" alt="arrow icon"></a>')
 
 // create and add marker
 
-L.marker([-22.89, -47.07], {icon})
+L.marker([-22.896, -47.075], {icon})
   .addTo(mymap)
   .bindPopup(popup)  
