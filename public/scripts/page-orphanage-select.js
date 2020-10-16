@@ -21,23 +21,39 @@ L.tileLayer(
 // custom icon 
 
 const icon = L.icon({
-    iconUrl: "./public/images/map-marker.svg",
+    iconUrl: "/images/map-marker.svg",
     iconSize: [58, 68],
     iconAnchor: [29, 68],
     popupAnchor: [170, 2]
 })
 
-// create popup box
+function addMarker({id, name, lat, lng}) {
+  
+  // create popup overlay
 
-const popup = L.popup({
+  const popup = L.popup({
     closeButton: false,
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Casa Maria de Nazaré <a href="orphanage-details.html?id=1" class="choose-orphanage"><img src="./public/images/arrow-white.svg" alt="arrow icon"></a>')
+  }).setContent(`${name} <a href="/orphanage-details?id=${id}"><img src="/images/arrow-white.svg" alt="arrow icon"></a>`)
 
-// create and add marker
+  // create and add marker
 
-L.marker([-22.896, -47.075], {icon})
+  L.marker([lat, lng], {icon})
   .addTo(mymap)
-  .bindPopup(popup)  
+  .bindPopup(popup)    
+}
+
+const orphanagesSpan = document.querySelectorAll('.orphanage-list span')
+
+orphanagesSpan.forEach( (span) => {
+  const orphanage = {
+    id: span.dataset.id,
+    name: span.dataset.name,
+    lat: span.dataset.lat,
+    lng: span.dataset.lng
+  }
+
+  addMarker(orphanage)
+})

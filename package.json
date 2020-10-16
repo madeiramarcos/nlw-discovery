@@ -1,0 +1,25 @@
+{
+  "name": "nlw-happy",
+  "version": "1.0.0",
+  "description": "Web App to connect People and Child Welfare Organizations responsible for the care of vulnerable children",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madeiramarcos/nlw-happy.git"
+  },
+  "keywords": ["web", "app", "volunteering", "welfare", "child", "npo", "non-profit-organizations"],
+  "author": "Marcos Madeira Marcio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/madeiramarcos/nlw-happy/issues"
+  },
+  "homepage": "https://github.com/madeiramarcos/nlw-happy#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "nodemon": "^2.0.5"
+  }
+}
