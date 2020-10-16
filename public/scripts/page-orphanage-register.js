@@ -31,15 +31,14 @@ const icon = L.icon({
 let marker;
 
 mymap.on('click', (event) => {
-    const lat = event.latlng.lat;
-    const lng = event.latlng.lng;
-
+    const lat = event.latlng.lat
+    const lng = event.latlng.lng
+    
     document.querySelector('[name=lat]').value = lat;
     document.querySelector('[name=lng]').value = lng;
 
     // remove marker pin
-    marker && map.removeLayer(marker)
-
+    marker && mymap.removeLayer(marker)
 
     // add marker pin
     marker = L.marker([lat, lng], {icon})

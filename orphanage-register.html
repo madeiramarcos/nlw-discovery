@@ -52,7 +52,7 @@
           <fieldset>
             <legend>Dados</legend>
 
-            <div class="map-container">
+            <div id="mapContainer" class="map-container">
               <div id="mapid"></div>
               <input type="hidden" name="lat">
               <input type="hidden" name="lng">
@@ -64,12 +64,12 @@
               </footer>
             </div>
 
-            <div class="input-block">
+            <div id="inputName" class="input-block">
               <label for="name">Nome</label>
               <input id="name" name="name" placeholder="Orfanato..." required />
             </div>
 
-            <div class="input-block">
+            <div id="inputAbout" class="input-block">
               <label for="about"
                 >Sobre <span>máximo de 300 caracteres</span></label
               >
@@ -81,18 +81,18 @@
               ></textarea>
             </div>
 
-            <div class="input-block">
+            <div id="inputWhatsapp" class="input-block">
               <label for="whatsapp">Número de whatsapp</label>
               <input
                 id="whatsapp"
                 name="whatsapp"
                 type="tel"
-                placeholder="(19)9 9090-9090 - digite apenas números"
+                placeholder="DDD Número - digite apenas números"
                 required
               />
             </div>
 
-            <div class="input-block images">
+            <div id="inputImages" class="input-block images">
               <label for="images">Foto</label>
 
               <div class="images-upload" id="images">
@@ -116,17 +116,17 @@
           <fieldset>
             <legend>Visitação</legend>
 
-            <div class="input-block">
-              <label for="instructions">Instruções</span></label>
+            <div id="inputInstructions" class="input-block">
+              <label for="instructions">Instruções<span>máximo de 300 caracteres</span></label>
               <textarea id="instructions" name="instructions" placeholder="Requisitos ou dicas para uma visita agradável..." required></textarea>
             </div>
 
-            <div class="input-block">
+            <div id="inputHours" class="input-block">
               <label for="open-hours">Horário de visitas</label>
               <input id="open-hours" name="open-hours" placeholder="Das 8h às 18h" required />
             </div>
 
-            <div class="input-block">
+            <div id="inputWeekendCheck" class="input-block">
               <label for="weekend-check">Horário de visitas</label>
               <input type="hidden" id="weekend-check" name="weekend-check" value="1" required/>
 
