@@ -93,13 +93,12 @@ function toggleSelect(event) {
     .forEach( (button) => {button.classList.remove('active')} )
 
     // colocar class .active no botão clicado
-    const button = event.currentTarget
+    const button = event.currentTarget    
     button.classList.add('active')
-
-    // atualizar o meu input hidden com o valor selecionado
-    const input = document.querySelector('[name="weekend-check"]')
-    input.value = button.dataset.value
     
-    // verificar se sim ou nao
+    // atualizar o meu input hidden com o valor selecionado
+    const input = document.querySelector('[name="weekendAvailability"]')
+    input.value = button.dataset.value
 
+    // verificar se sim ou nao
 }

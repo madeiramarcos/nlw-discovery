@@ -6,6 +6,8 @@ const pages = require('./pages.js');
 // iniciando express lib
 const server = express()
 server
+    // utilizar body do req
+    .use(express.urlencoded({ extended: true}))
     // utilizando os arquivos estáticos
     .use(express.static('public'))
 
@@ -18,6 +20,7 @@ server
     .get('/orphanage-select', pages.orphanageSelect)
     .get('/orphanage-details', pages.orphanageDetails)
     .get('/orphanage-register', pages.orphanageRegister)
+    .post('/save-orphanage', pages.saveOrphanage)
 
 // ligar o servidor
 server.listen(5500)

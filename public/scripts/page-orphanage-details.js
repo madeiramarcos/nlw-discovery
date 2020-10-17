@@ -1,14 +1,17 @@
 const options = {
-    dragging: false,
-    touchZoom: false,
-    doubleClickZoom: false,
-    scrollWheelZoom: false,
-    zoomControl: false
-}
+  dragging: false,
+  touchZoom: false,
+  doubleClickZoom: false,
+  scrollWheelZoom: false,
+  zoomControl: false,
+};
 
-// create map environment
+// grab latitude and longitude from database to set up map display
+const lat = document.querySelector("[data-lat").dataset.lat
+const lng = document.querySelector("[data-lng").dataset.lng
 
-const mymap = L.map("mapid", options).setView([-22.896, -47.075], 15);
+// create map environment and center view on marker
+const mymap = L.map("mapid", options).setView([lat, lng], 15);
 
 // add tileLayer to map environment
 
@@ -26,40 +29,41 @@ L.tileLayer(
   }
 ).addTo(mymap);
 
-// custom icon 
+// custom icon
 
 const icon = L.icon({
-    iconUrl: "/images/map-marker.svg",
-    iconSize: [58, 68],
-    iconAnchor: [29, 68],
-    popupAnchor: [170, 2]
-})
+  iconUrl: "/images/map-marker.svg",
+  iconSize: [58, 68],
+  iconAnchor: [29, 68],
+  popupAnchor: [170, 2],
+});
 
 // create and add marker
 
-L.marker([-22.896, -47.075], {icon})
-.addTo(mymap)
-
+L
+.marker([lat, lng], { icon })
+.addTo(mymap);
 
 // image gallery
 
-  function selectImage(event) {
-    const button = event.currentTarget
-    
-    // remove all .active classes from other buttons
-    const buttons = document.querySelectorAll('.images button')
-    buttons.forEach((button) => {button.classList.remove('active')})
-    
-    // add .active class to selected button
-    button.classList.add('active')
-    
-    // select clicked button
-    const image = button.children[0]
-    const mainDisplayImg = document.querySelector('.orphanage-details > img')
-    // const mainDisplayAlt = document.querySelector('.orphanage-details > alt')
+function selectImage(event) {
+  const button = event.currentTarget;
 
-    // update main-display img and alt
-    mainDisplayImg.src = image.src
-    mainDisplayImg.alt = image.alt
+  // remove all .active classes from other buttons
+  const buttons = document.querySelectorAll(".images button");
+  buttons.forEach((button) => {
+    button.classList.remove("active");
+  });
 
-  }
+  // add .active class to selected button
+  button.classList.add("active");
+
+  // select clicked button
+  const image = button.children[0];
+  const mainDisplayImg = document.querySelector(".orphanage-details > img");
+  // const mainDisplayAlt = document.querySelector('.orphanage-details > alt')
+
+  // update main-display img and alt
+  mainDisplayImg.src = image.src;
+  mainDisplayImg.alt = image.alt;
+}

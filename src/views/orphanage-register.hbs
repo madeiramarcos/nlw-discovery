@@ -48,7 +48,7 @@
       </aside>
 
       <main class="animate-appear">
-        <form action="">
+        <form action="save-orphanage" method="post">
           <fieldset>
             <legend>Dados</legend>
 
@@ -69,13 +69,13 @@
               <input id="name" name="name" placeholder="Orfanato..." required />
             </div>
 
-            <div id="inputAbout" class="input-block">
-              <label for="about"
+            <div id="inputdescription" class="input-block">
+              <label for="descr"
                 >Sobre <span>máximo de 300 caracteres</span></label
               >
               <textarea
-                id="about"
-                name="about"
+                id="description"
+                name="description"
                 placeholder="Descrição curta..."
                 required
               ></textarea>
@@ -98,7 +98,7 @@
               <div class="images-upload" id="images">
 
                 <div class="new-upload">
-                  <input name="images" placeholder="Cole o link da foto aqui." required/>
+                  <input name="images" placeholder="Cole o link da foto aqui. (http://...)" required type="url"/>
                   <span onclick="deleteField(event)">
                     <img src="/images/cancel-img.svg" alt="Remover foto">
                   </span>
@@ -122,24 +122,27 @@
             </div>
 
             <div id="inputHours" class="input-block">
-              <label for="open-hours">Horário de visitas</label>
-              <input id="open-hours" name="open-hours" placeholder="Das 8h às 18h" required />
+              <label for="openHours">Horário de visitas</label>
+              <input id="openHours" name="openHours" placeholder="Das 8h às 18h" required />
             </div>
 
             <div id="inputWeekendCheck" class="input-block">
-              <label for="weekend-check">Horário de visitas</label>
-              <input type="hidden" id="weekend-check" name="weekend-check" value="1" required/>
+              <label for="weekendAvailability">Atende fim de semana?</label>
+              <input type="hidden" id="" name="weekendAvailability" value="1" required/>
 
               <div class="button-select">
-                <button data-value="1"
+                <div class="green"><button data-value="1"
                   onclick="toggleSelect(event)"
                   type="button"
-                  class="active"
-                  >Sim</button>
-                <button data-value="0"
+                  class="active greenbut"
+                  >Sim</button></div>
+                <div class="red"><button data-value="0"
                   onclick="toggleSelect(event)"
+                  class="redbut"
                   type="button"
-                 >Não</button>
+                 >Não</button></div>
+                
+                
               </div>
 
               <button type="submit" class="primary-button">
